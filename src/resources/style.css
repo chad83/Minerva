@@ -1,0 +1,21 @@
+.locations-list {
+    display: table;
+    width: 90%;
+}
+
+.locations-list .location-header {
+    display: table-row;
+    font-weight: bold;
+}
+
+.locations-list .location-header .header-element {
+    display: table-cell;
+}
+
+.locations-list .location-row {
+    display: table-row;
+}
+
+.locations-list .location-row .location-item {
+    display: table-cell;
+}
