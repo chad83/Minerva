@@ -1,6 +1,7 @@
 <?php
 
 require('classes/Locations.php');
+require('classes/Books.php');
 
 /**
  * This is a debug variable, call it passing any kind of variable in it to see it in a
@@ -30,6 +31,9 @@ function debug(mixed $variable): void
         <div class="browse-locations">
             <a href="locations.php">Checkout all our locations</a>
             <a href="locations.php?countryCode=FR">Checkout all our locations in France</a>
+        </div>
+        <div class="browse-locations">
+            <a href="books.php">Checkout all our books</a>
         </div>
 
     </body>
