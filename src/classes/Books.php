@@ -1,8 +1,9 @@
 <?php
 
 require_once('tools/Database.php');
+require_once("classes/Abstract.php");
 
-class Books 
+class Books extends AbstractLibrary
 {
     private mysqli $dbConnection;
     
@@ -11,12 +12,12 @@ class Books
         $db = new Database();
         $this->dbConnection = $db->connect();
     }
-
-    public function getAllBooks(): array
+ 
+     // I think table name should be assigned a value here. like $tablename = books or something.
+     // but I keep getting an error message. okay and it's past midnight an i'm sleepy. ZzzZZZz
+    public function getAll($tablename): array
     {
-        $queryObject = $this->dbConnection->query('SELECT * FROM books');
-        
-        return $queryObject->fetch_all(MYSQLI_ASSOC);
+
     }
 
     public function getBooksByIsbn(string $isbn): array
