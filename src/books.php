@@ -8,7 +8,7 @@ $booksList = [];
 if (!isset($_GET['isbn'])) {
     $booksList = $books->getAllBooks();
 } else {
-    // $booksList = $books->getLocationsByCountryCode($_GET['countryCode']); 
+    $booksList = $books->getBooksByIsbn($_GET['isbn']); 
 }
 ?>
 

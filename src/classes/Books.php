@@ -19,4 +19,14 @@ class Books
         return $queryObject->fetch_all(MYSQLI_ASSOC);
     }
 
+    public function getBooksByIsbn(string $isbn): array
+    {
+
+        $query = $this->dbConnection->prepare('SELECT * FROM books WHERE isbn = ?');
+        $query->bind_param('s', $isbn);
+        $query->execute();
+        $result = $query->get_result();
+        
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
 }

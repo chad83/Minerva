@@ -34,6 +34,7 @@ function debug(mixed $variable): void
         </div>
         <div class="browse-locations">
             <a href="books.php">Checkout all our books</a>
+            <a href="books.php?isbn=9653212345328">Chadi's Book</a>
         </div>
 
     </body>
